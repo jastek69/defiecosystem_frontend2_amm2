@@ -21,6 +21,8 @@ const Charts = () => {
     const tokens = useSelector(state => state.tokens.contracts)
     const symbols = useSelector(state => state.tokens.symbols)
     
+    const tokenBalances = useSelector(state => state.amm.balances)
+    
     const amm = useSelector(state => state.amm.contract)
 
     const chart = useSelector(chartSelector) // Complex Selector so pass in the function  -- for Chart

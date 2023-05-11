@@ -12,7 +12,8 @@ import Alert from "./Alert";
 
 import {
     removeLiquidity,
-    loadBalances
+    loadBalances,
+    loadMarketTokenBalances
 } from '../store/interactions'
 
 
@@ -27,6 +28,8 @@ const Withdraw = () => {
 
     const tokens = useSelector(state => state.tokens.contracts)
     const balances = useSelector(state => state.tokens.balances)
+
+    const tokenBalances = useSelector(state => state.amm.balances)
 
     const amm = useSelector(state => state.amm.contract)
     const isWithdrawing = useSelector(state => state.amm.withdrawing.isWithdrawing)
@@ -50,6 +53,8 @@ const Withdraw = () => {
         )
 
         await loadBalances(amm, tokens, account, dispatch)
+
+        await loadMarketTokenBalances(amm, tokens, dispatch)
 
         setShowAlert(true)
         setAmount(0)
