@@ -38,7 +38,7 @@ const Navigation = () => {
         src={logo}
         width="40"
         height="40"
-        className="d-inline-block align-top mx-3"
+        className="d-inline-block align-top mx-3"        
       />
       <Navbar.Brand href="#">DARK UNICORN EXCHANGE AMM2</Navbar.Brand>
       <Navbar.Toggle aria-controls="nav" />

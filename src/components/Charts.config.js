@@ -17,6 +17,7 @@ export const options = {
     },
     title: {
       text: 'Reserve History', // reserves inside of amm
+      colors: ['#f6f5f7'],
       align: 'left'
     },
     grid: {

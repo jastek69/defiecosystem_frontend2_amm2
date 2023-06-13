@@ -37,7 +37,7 @@ const Charts = () => {
 
 
     return (
-        <div>
+        <div style={{ backgroundColor: '#a58fc9', opacity: 0.8}}>
             {provider && amm ? (
                 <div>   
                     <Chart
